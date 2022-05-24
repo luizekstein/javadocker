@@ -30,9 +30,9 @@ if [ $? -eq 0 ]
 			sudo apt update -y
 			clear
 			
-			if [ $VERSAO -eq 11 ]
+			if [ $VERSAO -eq 8 ]
 				then
-					echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Preparando para instalar a versão 11 do Java. Confirme a instalação quando solicitado ;D"
+					echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Preparando para instalar a versão 8 do Java."
 					sudo apt install default-jre ; apt install openjdk-8-jre; -y
 					clear
 					echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Java instalado com sucesso!"
@@ -77,7 +77,7 @@ if [ -d javadocker/ ];
 	 	cd javadocker/; 
 		git pull;
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Agora, vamos clonar o repositório."
-	 	git clone https://github.com/luizekstein/javadocker;
+	 	git clone https://github.com/luizekstein/javadocker.git;
 		cd javadocker/;
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Pronto! Irei criar seu container para executar o mesmo."
 		sleep 5
@@ -87,7 +87,7 @@ if [ -d javadocker/ ];
 		sudo docker exec -it java-docker bash;
 	else 
 	 	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Agora, vamos clonar o repositório."
-	 	git clone https://github.com/luizekstein/javadocker;
+	 	git clone https://github.com/luizekstein/javadocker.git;
 		sleep 5
 		cd javadocker
 		sleep 5
