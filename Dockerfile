@@ -1,9 +1,9 @@
 FROM openjdk:11
 
-WORKDIR /home
-
-RUN cd /home
-
 COPY app.jar /home
 
-ENTRYPOINT java -jar /home/app.jar
+WORKDIR /home/ubuntu/javadocker
+
+RUN cd /home/ubuntu/javadocker
+
+ENTRYPOINT java -jar /home/ubuntu/javadocker/app.jar
