@@ -10,7 +10,7 @@ sudo apt update -y
 sudo apt upgrade
 echo  "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Agora, vou verificar aqui se você possui o Java instalado...;"
 
-java -version
+java --version
 if [ $? -eq 0 ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Olá você já tem o java instalado!!"
@@ -78,7 +78,7 @@ if [ -d javadocker/ ];
 		git pull;
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Agora, vamos clonar o repositório."
 	 	git clone https://github.com/luizekstein/javadocker.git;
-		cd javadocker.git;
+		cd javadocker;
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Pronto! Irei criar seu container para executar o mesmo."
 		sleep 5
 		sudo docker-compose up -d --build;
@@ -89,7 +89,7 @@ if [ -d javadocker/ ];
 	 	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Agora, vamos clonar o repositório."
 	 	git clone https://github.com/luizekstein/javadocker.git;
 		sleep 5
-		cd javadocker.git
+		cd javadocker
 		sleep 5
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Pronto! Irei criar seu container para executar o mesmo."
 		sleep 5
