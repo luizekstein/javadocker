@@ -1,9 +1,9 @@
 FROM openjdk:11
 
-COPY app.jar /home
+WORKDIR /home
 
-WORKDIR /home/ubuntu/javadocker
+RUN cd /home
 
-RUN cd /home/ubuntu/javadocker
+COPY Quatro-1.1-SNAPSHOT-jar-with-dependencies.jar /home
 
-ENTRYPOINT java -jar /home/ubuntu/javadocker/app.jar
+ENTRYPOINT java -jar /home/Quatro-1.1-SNAPSHOT-jar-with-dependencies.jar
