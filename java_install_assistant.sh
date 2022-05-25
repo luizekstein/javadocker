@@ -77,7 +77,7 @@ if [ -d javadocker/ ];
 	 	cd javadocker/; 
 		git pull;
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Agora, vamos clonar o repositório."
-	 	git clone https://github.com/pedro18082002/javadocker;
+	 	git clone https://github.com/luizekstein/javadocker;
 		cd javadocker/;
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Pronto! Irei criar seu container para executar o mesmo."
 		sleep 5
@@ -87,7 +87,7 @@ if [ -d javadocker/ ];
 		sudo docker exec -it java-docker bash;
 	else 
 	 	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Agora, vamos clonar o repositório."
-	 	git clone https://github.com/pedro18082002/javadocker;
+	 	git clone https://github.com/luizekstein/javadocker;
 		sleep 5
 		cd javadocker
 		sleep 5
